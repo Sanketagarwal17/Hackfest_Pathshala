@@ -15,6 +15,7 @@ public class aboutus extends AppCompatActivity {
         setContentView(R.layout.activity_aboutus);
 //huikju
 //sanku
+        //jjj
 
 
     }
