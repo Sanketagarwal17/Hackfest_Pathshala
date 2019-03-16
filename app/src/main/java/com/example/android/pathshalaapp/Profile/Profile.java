@@ -4,6 +4,8 @@ package com.example.android.pathshalaapp.Profile;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -68,15 +70,22 @@ public class Profile extends AppCompatActivity {
         firebaseDatabase=FirebaseDatabase.getInstance();
         databaseReference=firebaseDatabase.getReference("Students_Profile");
 
-        ProfilePojo profile=new ProfilePojo(name,school,mobile,email,std,batch);
-        databaseReference.push().setValue(profile).addOnCompleteListener(new OnCompleteListener<Void>() {
+        Button submit=findViewById(R.id.submit);
+        submit.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onComplete(@NonNull Task<Void> task)
+            public void onClick(View v)
             {
-                if(task.isSuccessful())
-                    Toast.makeText(Profile.this,"Uploaded on FireBase",Toast.LENGTH_SHORT).show();
-                else
-                    Toast.makeText(Profile.this,task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                ProfilePojo profile=new ProfilePojo(name,school,mobile,email,std,batch);
+                databaseReference.push().setValue(profile).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if(task.isSuccessful())
+                            Toast.makeText(Profile.this,"Uploaded on FireBase",Toast.LENGTH_SHORT).show();
+                        else
+                            Toast.makeText(Profile.this,task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+
+                    }
+                });
             }
         });
 
