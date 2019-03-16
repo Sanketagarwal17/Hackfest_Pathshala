@@ -35,9 +35,9 @@ public class LogIn_Page extends AppCompatActivity {
 
         if(user==null || pass==null)
         {
-            Toast.makeText(this,"Empty Field",Toast.LENGTH_SHORT).show();
-            username.requestFocus();
-            password.requestFocus();
+            Toast.makeText(this,"These fields cannot be left empty ",Toast.LENGTH_LONG).show();
+           // username.requestFocus();
+           // password.requestFocus();
         }
         else {
             final ProgressDialog progressDialog = new ProgressDialog(this);

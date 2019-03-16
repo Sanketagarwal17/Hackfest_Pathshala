@@ -26,7 +26,7 @@
         <activity android:name=".LogIn_Page" />
 
         <activity android:name=".faculty" />
-        <activity android:name=".Profile.Profile" />
+
         <activity android:name=".otpverification" />
         <activity android:name=".aboutus" />
         <activity android:name=".MainActivity" />
