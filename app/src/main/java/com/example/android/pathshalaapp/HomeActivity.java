@@ -22,7 +22,7 @@ import com.example.android.pathshalaapp.Profile.Profile;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    Button bu;
+    Button bu,sn;
 
 
 
@@ -55,6 +55,7 @@ public class HomeActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         bu=(Button)findViewById(R.id.button3);
+        sn=(Button)findViewById(R.id.button4);
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
@@ -62,6 +63,13 @@ public class HomeActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
    //Extra Code for testing
+
+        sn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this,VerifyPhoneActivity.class));
+            }
+        });
         bu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
