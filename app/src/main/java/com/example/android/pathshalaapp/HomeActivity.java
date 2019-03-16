@@ -61,6 +61,7 @@ public class HomeActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+   //Extra Code for testing
         bu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,7 +69,7 @@ public class HomeActivity extends AppCompatActivity
             }
         });
 
-
+    //Extra code ends
 
 
 
