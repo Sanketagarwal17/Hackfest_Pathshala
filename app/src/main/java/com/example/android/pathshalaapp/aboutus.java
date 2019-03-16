@@ -14,7 +14,7 @@ public class aboutus extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aboutus);
 //huikju
-
+//sanku
 
 
     }
