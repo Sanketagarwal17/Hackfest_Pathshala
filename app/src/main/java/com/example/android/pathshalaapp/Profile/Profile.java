@@ -2,13 +2,16 @@ package com.example.android.pathshalaapp.Profile;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.EditText;
 import android.widget.TextView;
+
+import com.example.android.pathshalaapp.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class Profile extends AppCompatActivity {
-/*
+
     @BindView(R.id.student_batch)
     EditText student_batch;
 
@@ -27,7 +30,7 @@ public class Profile extends AppCompatActivity {
     @BindView(R.id.student_school)
     EditText student_school;
 
-
+    String name,school,mobile,email,std,batch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +46,4 @@ public class Profile extends AppCompatActivity {
         student_name.setText(name);
 
     }
-
-
-*/
 }
