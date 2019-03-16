@@ -78,13 +78,13 @@
                         android:textColor="@color/colorAccent"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <EditText
                         android:id="@+id/student_name"
                         style="?android:textAppearanceMedium"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Malav Shah" />
+                        android:hint="Enter name" />
 
 
                 </LinearLayout>
@@ -116,13 +116,13 @@
                         android:textColor="@color/colorAccent"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <EditText
                         android:id="@+id/student_school"
                         style="?android:textAppearanceMedium"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="TTV" />
+                        android:hint="Enter School" />
 
                 </LinearLayout>
 
@@ -153,13 +153,13 @@
                         android:textColor="@color/colorAccent"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <EditText
                         android:id="@+id/student_number"
                         style="?android:textAppearanceMedium"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="9033137266" />
+                        android:hint="Enter Mobile Number" />
 
                 </LinearLayout>
 
@@ -195,8 +195,7 @@
                         style="?android:textAppearanceMedium"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="malavshah502@gmail.com" />
+                        android:layout_weight="1" />
 
                 </LinearLayout>
 
@@ -227,13 +226,13 @@
                         android:textColor="@color/colorAccent"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <EditText
                         android:id="@+id/student_standard"
                         style="?android:textAppearanceMedium"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="12" />
+                        android:hnt="Enter Standard" />
 
                 </LinearLayout>
 
@@ -264,13 +263,13 @@
                         android:textColor="@color/colorAccent"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <EditText
                         android:id="@+id/student_batch"
                         style="?android:textAppearanceMedium"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="A" />
+                        android:hint="Enter Batch" />
 
                 </LinearLayout>
 

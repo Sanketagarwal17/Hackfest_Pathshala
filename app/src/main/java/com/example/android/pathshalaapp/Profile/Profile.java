@@ -1,4 +1,4 @@
-package com.example.android.pathshalaapp;
+package com.example.android.pathshalaapp.Profile;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,22 +10,22 @@ import butterknife.ButterKnife;
 public class Profile extends AppCompatActivity {
 /*
     @BindView(R.id.student_batch)
-    TextView student_batch;
+    EditText student_batch;
 
     @BindView(R.id.student_number)
-    TextView student_number;
+    EditText student_number;
 
     @BindView(R.id.student_email)
     TextView student_email;
 
     @BindView(R.id.student_name)
-    TextView student_name;
+    EditText student_name;
 
     @BindView(R.id.student_standard)
-    TextView student_standard;
+    EditText student_standard;
 
     @BindView(R.id.student_school)
-    TextView student_school;
+    EditText student_school;
 
 
 
@@ -43,8 +43,6 @@ public class Profile extends AppCompatActivity {
         student_name.setText(name);
 
     }
-
-
 
 
 */
