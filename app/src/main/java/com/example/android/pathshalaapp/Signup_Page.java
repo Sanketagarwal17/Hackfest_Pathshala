@@ -26,7 +26,7 @@ public class Signup_Page extends AppCompatActivity
         password=findViewById(R.id.signup_password);
         firebaseAuth=FirebaseAuth.getInstance();
     }
-
+    //testing
     public void SignUp(View view)
     {
         String email=username.getText().toString();
