@@ -39,10 +39,11 @@ public class HomeActivity extends AppCompatActivity
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    mTextMessage.setText("Home");
+                   // mTextMessage.setText("Home");
                     return true;
                 case R.id.navigation_dashboard:
-                    mTextMessage.setText("Dashboard");
+                   // setContentView(R.layout.dashboard_demo);
+                   // mTextMessage.setText("Dashboard");
                     return true;
                 case R.id.navigation_notifications:
                     startActivity(new Intent(HomeActivity.this,Notice.class));
@@ -173,14 +174,14 @@ public class HomeActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_otpVerification)
         {
-            FirebaseAuth.getInstance().signOut();
-            finish();
-            startActivity(new Intent(HomeActivity.this,LogIn_Page.class));
+
+            startActivity(new Intent(HomeActivity.this,VerifyPhoneActivity.class));
 
         } else if (id == R.id.nav_share) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_aboutUs) {
 
+            startActivity(new Intent(HomeActivity.this,aboutus.class));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

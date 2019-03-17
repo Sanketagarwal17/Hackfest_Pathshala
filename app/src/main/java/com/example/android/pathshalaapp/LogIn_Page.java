@@ -32,6 +32,8 @@ public class LogIn_Page extends AppCompatActivity
         password = findViewById(R.id.login_password);
         firebaseAuth = FirebaseAuth.getInstance();
 
+
+
         firebaseUser=firebaseAuth.getCurrentUser();
         if(firebaseUser!=null)
         {
