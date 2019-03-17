@@ -29,12 +29,12 @@ public class FacultyAdapter extends RecyclerView.Adapter<FacultyAdapter.ViewHold
     @NonNull
     @Override
     public FacultyAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.notice_list_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.faculty_item_list, parent, false);
         return new FacultyAdapter.ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull FacultyAdapter.ViewHolder viewHolder, int position)
+    public void onBindViewHolder(FacultyAdapter.ViewHolder viewHolder, int position)
     {
         FacultyModelClass faculty=arrayList.get(position);
         String name=faculty.getName();

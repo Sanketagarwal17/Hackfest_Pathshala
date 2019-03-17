@@ -30,6 +30,7 @@
 
         <activity android:name=".otpverification" />
         <activity android:name=".aboutus" />
+        <activity android:name=".Faculty.Faculty"/>
         <activity android:name=".MainActivity" />
         <activity android:name=".Notice.Notice"/>
         <activity android:name=".chatroom.ChatRoom_studs" />

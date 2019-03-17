@@ -15,18 +15,30 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
-public class LogIn_Page extends AppCompatActivity {
+public class LogIn_Page extends AppCompatActivity
+{
     EditText username, password;
     FirebaseAuth firebaseAuth;
+    FirebaseUser firebaseUser;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_page);
         username = findViewById(R.id.login_email);
         password = findViewById(R.id.login_password);
         firebaseAuth = FirebaseAuth.getInstance();
+
+        firebaseUser=firebaseAuth.getCurrentUser();
+        if(firebaseUser!=null)
+        {
+            finish();
+            startActivity(new Intent(LogIn_Page.this,HomeActivity.class));
+        }
+
     }
 
     public void login(View view) {
