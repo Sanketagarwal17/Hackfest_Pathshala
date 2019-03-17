@@ -39,7 +39,7 @@ public class VerifyPhoneActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressbar);
         editText = findViewById(R.id.editTextCode);
 
-        sendVerificationCode("9879580784");
+        sendVerificationCode("+919879580784");
 
         findViewById(R.id.buttonSignIn).setOnClickListener(new View.OnClickListener() {
             @Override
