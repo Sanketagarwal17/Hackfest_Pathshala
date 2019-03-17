@@ -1,6 +1,7 @@
 package com.example.android.pathshalaapp.Profile;
 
 
+import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -52,6 +53,7 @@ public class Profile extends AppCompatActivity {
 
 
     String name,school,mobile,email,std,batch;
+    //String user_batch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,8 +61,16 @@ public class Profile extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
         ButterKnife.bind(this);
 
+        //sreyans
+        SharedPreferences batch_sharedPreferneces = this.getSharedPreferences(getPackageName(),MODE_PRIVATE);
+        batch_sharedPreferneces.edit().putString("user_batch",batch).apply();
+
+        //sreyans- saves batch in a string name user_batch
+
+
         firebaseUser= FirebaseAuth.getInstance().getCurrentUser();
         batch=student_batch.getText().toString();
+
         name=student_name.getText().toString();
         school=student_school.getText().toString();
         mobile=student_number.getText().toString();

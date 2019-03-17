@@ -45,7 +45,7 @@ public class HomeActivity extends AppCompatActivity
                     mTextMessage.setText("Dashboard");
                     return true;
                 case R.id.navigation_notifications:
-                    mTextMessage.setText("Notifications");
+                    startActivity(new Intent(HomeActivity.this,Notice.class));
                     return true;
             }
             return false;
@@ -58,14 +58,14 @@ public class HomeActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        bu=(Button)findViewById(R.id.button3);
-        sn=(Button)findViewById(R.id.button4);
+        //bu=(Button)findViewById(R.id.button3);
+       // sn=(Button)findViewById(R.id.button4);
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+/*
    //Extra Code for testing
 
         sn.setOnClickListener(new View.OnClickListener() {
@@ -97,7 +97,7 @@ public class HomeActivity extends AppCompatActivity
         });
     //Extra code ends
 
-
+*/
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -147,7 +147,11 @@ public class HomeActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            FirebaseAuth.getInstance().signOut();
+            finish();
+            startActivity(new Intent(HomeActivity.this,LogIn_Page.class));
+
+
         }
 
         return super.onOptionsItemSelected(item);
@@ -165,8 +169,9 @@ public class HomeActivity extends AppCompatActivity
         } else if (id == R.id.nav_testScore) {
 
         } else if (id == R.id.nav_facultyList) {
+            startActivity(new Intent(HomeActivity.this,Faculty.class));
 
-        } else if (id == R.id.nav_logOut)
+        } else if (id == R.id.nav_otpVerification)
         {
             FirebaseAuth.getInstance().signOut();
             finish();
