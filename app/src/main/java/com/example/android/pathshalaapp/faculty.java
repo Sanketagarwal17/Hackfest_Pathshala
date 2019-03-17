@@ -20,7 +20,7 @@ public class faculty extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        recyclerView = (RecyclerView) findViewById(R.id.facultyrecyclerview);
+        recyclerView = (RecyclerView) findViewById(R.id.faculty_recyclerview);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     facultyList=new ArrayList<>();

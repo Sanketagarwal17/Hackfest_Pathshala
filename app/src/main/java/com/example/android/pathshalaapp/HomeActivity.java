@@ -18,6 +18,8 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.android.pathshalaapp.Faculty.Faculty;
+import com.example.android.pathshalaapp.Notice.Notice;
 import com.example.android.pathshalaapp.Profile.Profile;
 
 public class HomeActivity extends AppCompatActivity
@@ -76,7 +78,21 @@ public class HomeActivity extends AppCompatActivity
                 startActivity(new Intent(HomeActivity.this, Profile.class));
             }
         });
+        Button notic=findViewById(R.id.noticedikhao);
+        notic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, Notice.class));
+            }
+        });
 
+        Button faculty=findViewById(R.id.faculty);
+        faculty.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, Faculty.class));
+            }
+        });
     //Extra code ends
 
 
