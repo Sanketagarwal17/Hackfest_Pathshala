@@ -52,12 +52,13 @@ public class Notice extends AppCompatActivity
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot)
             {
-                Log.i("info",dataSnapshot.getChildren().toString());
                 arrayList.clear();
                 for(DataSnapshot ds:dataSnapshot.getChildren())
                 {
+                    String message=ds.child("message").getValue().toString();
+                    String name=ds.child("name").getValue().toString();
 
-                    noticeModelClass=ds.getValue(NoticeModelClass.class);
+                    noticeModelClass=new NoticeModelClass(message,name);
                     arrayList.add(noticeModelClass);
                 }
                 recyclerView.setAdapter(noticeAdapter);

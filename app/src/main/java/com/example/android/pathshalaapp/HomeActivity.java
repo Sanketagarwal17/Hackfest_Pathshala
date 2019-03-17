@@ -21,6 +21,7 @@ import android.widget.TextView;
 import com.example.android.pathshalaapp.Faculty.Faculty;
 import com.example.android.pathshalaapp.Notice.Notice;
 import com.example.android.pathshalaapp.Profile.Profile;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -29,6 +30,7 @@ public class HomeActivity extends AppCompatActivity
 
 
     private TextView mTextMessage;
+
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -157,13 +159,18 @@ public class HomeActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_myProfile) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+            startActivity(new Intent(HomeActivity.this, Profile.class));
+        } else if (id == R.id.nav_testScore) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_facultyList) {
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_logOut)
+        {
+            FirebaseAuth.getInstance().signOut();
+            finish();
+            startActivity(new Intent(HomeActivity.this,LogIn_Page.class));
 
         } else if (id == R.id.nav_share) {
 

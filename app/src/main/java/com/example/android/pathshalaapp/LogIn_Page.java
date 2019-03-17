@@ -50,6 +50,7 @@ public class LogIn_Page extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             progressDialog.dismiss();
                             if (task.isSuccessful()) {
+                                finish();
                                 Toast.makeText(LogIn_Page.this, "Logged In", Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(LogIn_Page.this, HomeActivity.class));
                             } else

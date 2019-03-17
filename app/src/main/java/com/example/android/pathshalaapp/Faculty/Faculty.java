@@ -36,7 +36,7 @@ public class Faculty  extends AppCompatActivity {
         setContentView(R.layout.activity_faculty);
 
         database = FirebaseDatabase.getInstance();
-        databaseReference = database.getReference().child("faculty");
+        databaseReference = database.getReference().child("teahers");
 
         arrayList = new ArrayList<>();
         final RecyclerView recyclerView = findViewById(R.id.faculty_recyclerview);
@@ -46,9 +46,14 @@ public class Faculty  extends AppCompatActivity {
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot ds : dataSnapshot.getChildren()) {
-                    facultyModelClass = ds.getValue(FacultyModelClass.class);
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot)
+            {
+                arrayList.clear();
+                for (DataSnapshot ds : dataSnapshot.getChildren())
+                {
+                    String email=ds.child("email").getValue().toString();
+                    String subject=ds.child("subject").getValue().toString();
+                    facultyModelClass = new FacultyModelClass(email,subject);
                     arrayList.add(facultyModelClass);
                 }
                 recyclerView.setAdapter(facultyAdapter);
