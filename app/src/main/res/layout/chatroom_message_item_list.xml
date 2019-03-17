@@ -3,19 +3,25 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="12dp"
-    android:orientation="vertical">
+    android:layout_margin="8dp"
+    android:orientation="vertical"
+    android:background="@drawable/chatbox_round"
+    android:padding="10dp"
+    >
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:textStyle="italic"
+        android:textColor="@android:color/black"
         android:id="@+id/chat_name"
-        android:background="@android:color/darker_gray"/>
+        android:background="@android:color/holo_green_light"
+        android:alpha="1"/>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/black"/>
+        android:layout_height="0dp"
+        android:background="@android:color/black"
+        android:layout_marginLeft="10dp"/>
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,6 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="17sp"
-        android:id="@+id/chat_text"        />
+        android:id="@+id/chat_text"
+        android:layout_marginLeft="10dp"/>
 
 </LinearLayout>
